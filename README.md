@@ -1,71 +1,106 @@
 Enterprise Online Job Portal
 
-A comprehensive desktop application for managing the recruitment lifecycle, built with Java Swing and MySQL. This system facilitates seamless interaction between Employers, Job Seekers, and Administrators.
+A robust desktop application designed to streamline the recruitment lifecycle. Built with Java Swing for a responsive user interface and MySQL for reliable data management, this system bridges the gap between employers and job seekers through a secure, role-based platform.
 
-🚀 Features
+🚀 Key Features
 
-1. 👤 Job Seeker Module
+👤 Job Seeker Module
 
-Secure Registration & Login: Role-based access control.
+Secure Access: Role-based login and registration system.
 
-Search Jobs: Filter job listings by keywords.
+Smart Search: Filter job listings instantly by keywords or job titles.
 
-Application Tracking: View real-time status updates (Pending/Accepted/Rejected).
+Application Tracking: Real-time status updates (Pending, Accepted, Rejected) visible directly on the dashboard.
 
-2. 💼 Employer Module
+💼 Employer Module
 
-Post Vacancies: Create job listings with title, description, and salary.
+Job Management: Post detailed job vacancies with title, description, and salary.
 
-Manage Applicants: View a tabular list of all applicants.
+Applicant Review: View a structured table of all candidates.
 
-Recruitment Actions: Accept or Reject candidates with a single click.
+Instant Decisions: Accept or reject applications with a single click, updating the candidate's status immediately.
 
-3. 🛡️ Admin Module
+🛡️ Admin Module
 
-System Oversight: View all active jobs and users.
+System Oversight: Monitor all active users and job postings.
 
-Content Moderation: Remove inappropriate job postings.
+Content Moderation: Ability to remove inappropriate or outdated job listings.
 
-🛠️ Technical Stack
+🛠️ Technical Architecture
 
 Language: Java (JDK 17+)
 
-GUI Framework: Java Swing (JFrame, JTable, GridBagLayout)
+Frontend: Java Swing (AWT) using JFrame, JTable, and GridBagLayout.
 
-Database: MySQL (Relational Schema)
+Database: MySQL Relational Database.
 
-Connectivity: JDBC (Java Database Connectivity)
+Connectivity: JDBC (Java Database Connectivity).
 
-Key Concepts: OOP (Inheritance, Polymorphism), Multithreading (Background email simulation), Collections Framework.
+Core Concepts:
 
-⚙️ Setup & Installation
+OOP: Extensive use of Inheritance (User -> Employer), Polymorphism, and Interfaces.
 
-Clone the Repository:
+Multithreading: Background threads handle email simulations to keep the UI responsive.
+
+Collections: Dynamic data handling using ArrayList and Generics.
+
+⚙️ Installation Guide
+
+Follow these steps to set up the project locally:
+
+Clone the Repository
 
 git clone [https://github.com/YOUR_USERNAME/Online-Job-Portal-Java-Swing.git](https://github.com/YOUR_USERNAME/Online-Job-Portal-Java-Swing.git)
 
 
-Database Setup:
+Database Configuration
 
 Open MySQL Workbench.
 
-Run the script located in database/schema.sql.
+Open the script file located at database/schema.sql.
 
-This will create the job_portal_gui database and required tables.
+Run the script to create the job_portal_gui database and all required tables.
 
-Configure Connection:
+Link the Application
 
-Open src/DatabaseService.java.
+Open src/DatabaseService.java in your IDE.
 
-Update the PASS variable on Line 11 with your MySQL root password.
+Locate Line 11: private static final String PASS = "your_password";
 
-Run the Application:
+Replace "your_password" with your actual MySQL root password.
 
-Compile and run JobPortalApp.java in your IDE (IntelliJ/Eclipse).
+Run the Application
 
-Ensure mysql-connector-j.jar is added to your project dependencies.
+Open the project in IntelliJ IDEA or Eclipse.
 
-👥 Team Members
+Ensure the mysql-connector-j.jar file (located in the lib/ folder) is added to your project's Classpath/Dependencies.
+
+Right-click src/JobPortalApp.java and select Run.
+
+📂 Project Structure
+
+Online-Job-Portal-Java-Swing/
+│
+├── src/                        # Source Code
+│   ├── JobPortalApp.java       # Main Entry Point & GUI Logic
+│   ├── JobPortalModels.java    # Data Models (POJOs)
+│   └── DatabaseService.java    # Database Connection & Business Logic
+│
+├── database/                   # SQL Scripts
+│   └── schema.sql              # Database Schema Creation Script
+│
+├── lib/                        # External Libraries
+│   └── mysql-connector-j.jar   # MySQL JDBC Driver
+│
+├── screenshots/                # Project Demo Images
+│   ├── login.png
+│   ├── employer_dashboard.png
+│   └── seeker_dashboard.png
+│
+└── README.md                   # Project Documentation
+
+
+👥 Team
 
 Santhosh Sankarganesh - Team Leader
 
